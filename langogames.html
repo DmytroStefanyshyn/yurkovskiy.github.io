@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+<button id="btn">Swith Lang</button>
+
+<script type="text/javascript">
+	var ukr = {
+		money:"гроші",
+		oil:"нафта",
+		shirt:"сорочка"
+	};
+
+	var rus = {
+		money:"деньги",
+		oil:"нефть",
+		shirt:"рубашка"
+	};
+
+	function generateMenu(lang) {
+		if (lang === "ukr") lang = ukr;
+		if (lang === "rus") lang = rus;
+		for (k in lang) {
+			console.log(lang[k]);			
+		}
+		
+	}
+
+</script>
+
+<script type="text/javascript">
+    var lang = "ukr";
+	btn.addEventListener("click", function() {
+		console.clear();
+		if (lang == "ukr") {
+			lang = "rus";
+		}
+		else {
+			lang = "ukr";
+		}
+		generateMenu(lang);
+	}, false);
+</script>
+
+</body>
+</html>
